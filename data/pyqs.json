@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "year": 2023,
+    "subject": "Polity",
+    "difficulty": "Medium",
+    "question": "With reference to the Parliament of India, which one of the following statements is correct?",
+    "options": [
+      "A bill pending in the Lok Sabha lapses on prorogation of the House.",
+      "A bill pending in the Rajya Sabha, but not passed by the Lok Sabha, does not lapse on dissolution of the Lok Sabha.",
+      "A bill passed by the Lok Sabha and pending in the Rajya Sabha lapses on prorogation of both Houses.",
+      "A bill originating in the Rajya Sabha and pending in the Lok Sabha lapses on prorogation of the Rajya Sabha."
+    ],
+    "answer": 1,
+    "explanation": "A bill pending in Rajya Sabha does not lapse on dissolution of Lok Sabha unless it is pending in Lok Sabha or passed by Lok Sabha and pending in Rajya Sabha.",
+    "source": "UPSC CSE Prelims"
+  },
+  {
+    "id": 2,
+    "year": 2022,
+    "subject": "History",
+    "difficulty": "Easy",
+    "question": "Who among the following was the founder of the Ramakrishna Mission?",
+    "options": [
+      "Raja Ram Mohan Roy",
+      "Swami Vivekananda",
+      "Dayananda Saraswati",
+      "Ishwar Chandra Vidyasagar"
+    ],
+    "answer": 1,
+    "explanation": "Ramakrishna Mission was founded by Swami Vivekananda in 1897.",
+    "source": "UPSC CSE Prelims"
+  },
+  {
+    "id": 3,
+    "year": 2021,
+    "subject": "Geography",
+    "difficulty": "Medium",
+    "question": "Which of the following factors are responsible for ocean currents?",
+    "options": [
+      "Rotation of Earth only",
+      "Wind, density differences, and Earth's rotation",
+      "Temperature only",
+      "Tides only"
+    ],
+    "answer": 1,
+    "explanation": "Ocean currents are influenced by winds, differences in temperature/salinity and Coriolis effect.",
+    "source": "UPSC CSE Prelims"
+  },
+  {
+    "id": 4,
+    "year": 2020,
+    "subject": "Economy",
+    "difficulty": "Hard",
+    "question": "Which one of the following best describes the term 'Repo Rate'?",
+    "options": [
+      "Rate at which banks lend to customers",
+      "Rate at which RBI lends to commercial banks against government securities",
+      "Rate at which RBI borrows from banks",
+      "Rate at which government borrows from RBI"
+    ],
+    "answer": 1,
+    "explanation": "Repo rate is the policy rate at which RBI lends short-term funds to banks against securities.",
+    "source": "UPSC CSE Prelims"
+  },
+  {
+    "id": 5,
+    "year": 2019,
+    "subject": "Environment",
+    "difficulty": "Medium",
+    "question": "In India, the term 'Schedule I species' under the Wildlife (Protection) Act implies: ",
+    "options": [
+      "Least protection",
+      "Moderate protection",
+      "Highest protection with stringent penalties",
+      "Protection only inside national parks"
+    ],
+    "answer": 2,
+    "explanation": "Schedule I species receive the highest degree of legal protection.",
+    "source": "UPSC CSE Prelims"
+  }
+]
