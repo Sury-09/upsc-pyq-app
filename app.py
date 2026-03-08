@@ -107,14 +107,21 @@ def main():
                 with action_col1:
                     if st.button("Submit", key=f"submit_{q['id']}"):
                         if q["id"] not in st.session_state.answered:
-                            st.session_state.attempted += 1
-                            correct = selected == q["answer"]
-                            if correct:
-                                st.session_state.score += 1
-                            st.session_state.answered[q["id"]] = {
-                                "selected": selected,
-                                "correct": correct,
-                            }
+                            answer_index = q.get("answer")
+                            if answer_index is None:
+                                st.session_state.answered[q["id"]] = {
+                                    "selected": selected,
+                                    "correct": None,
+                                }
+                            else:
+                                st.session_state.attempted += 1
+                                correct = selected == answer_index
+                                if correct:
+                                    st.session_state.score += 1
+                                st.session_state.answered[q["id"]] = {
+                                    "selected": selected,
+                                    "correct": correct,
+                                }
 
                 with action_col2:
                     bookmarked = q["id"] in st.session_state.bookmarks
@@ -128,11 +135,18 @@ def main():
 
                 if q["id"] in st.session_state.answered:
                     result = st.session_state.answered[q["id"]]
-                    if result["correct"]:
+                    if result["correct"] is True:
                         st.success("Correct answer")
-                    else:
+                    elif result["correct"] is False:
                         st.error("Incorrect answer")
-                    st.write(f"**Correct Option:** {q['options'][q['answer']]}")
+                    else:
+                        st.info("Answer key not available for this question.")
+
+                    if q.get("answer") is not None:
+                        st.write(f"**Correct Option:** {q['options'][q['answer']]}")
+                    else:
+                        st.write("**Correct Option:** Not available")
+
                     st.caption(f"Explanation: {q['explanation']}")
                     st.caption(f"Source: {q['source']}")
 
@@ -144,7 +158,10 @@ def main():
             with st.container(border=True):
                 st.subheader(f"Q{q['id']} ({q['year']} - {q['subject']})")
                 st.write(q["question"])
-                st.write(f"**Answer:** {q['options'][q['answer']]}")
+                if q.get("answer") is not None:
+                    st.write(f"**Answer:** {q['options'][q['answer']]}")
+                else:
+                    st.write("**Answer:** Not available")
 
 
 if __name__ == "__main__":
